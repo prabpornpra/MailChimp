@@ -14,10 +14,10 @@
  *
  * @category Component
  * @package  Web
- * @author   Blendtec <noreply@blendtec.com>
- * @date     03.22.2011
- * @license  BSD http://www.opensource.org/licenses/bsd-license.php
- * @link     http://www.blendtec.com
+ * @author   Orabpornpra <orabpornpra@blendtec.com>
+ * @date     02.18.2014
+ * @license  The MIT License (MIT)
+ * @link     https://github.com/ORabpornpra/MailChimp
  */
 App::uses('Component', 'Controller');
 App::uses('HttpSocket', 'Network/Http');
@@ -26,9 +26,9 @@ App::uses('HttpSocket', 'Network/Http');
  *
  * @category Component
  * @package  Web
- * @author   Blendtec <noreply@blendtec.com>
- * @license  BSD http://www.opensource.org/licenses/bsd-license.php
- * @link     http://www.blendtec.com
+ * @author   Orabpornpra <orabpornpra@blendtec.com>
+ * @license  The MIT License (MIT)
+ * @link     https://github.com/ORabpornpra/MailChimp
  * @throws  Exception
  */
 class UseMailChimpComponent extends Component {
