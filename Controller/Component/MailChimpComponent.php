@@ -31,7 +31,7 @@ App::uses('HttpSocket', 'Network/Http');
  * @link     https://github.com/ORabpornpra/MailChimp
  * @throws  Exception
  */
-class UseMailChimpComponent extends Component {
+class MailChimpComponent extends Component {
 
 	const JSON = 'json';
 	const XML = 'xml';
@@ -41,9 +41,9 @@ class UseMailChimpComponent extends Component {
 	private $__apiUrl;
 
 	private $__formats = array (
-		UseMailChimpComponent::JSON,
-		UseMailChimpComponent::XML,
-		UseMailChimpComponent::PHP,
+		MailChimpComponent::JSON,
+		MailChimpComponent::XML,
+		MailChimpComponent::PHP,
 	);
 
 	private $__apiKey;
@@ -109,7 +109,7 @@ class UseMailChimpComponent extends Component {
  * @throws Exception
  */
 	private function __makeCall($params, $sectionsMethod) {
-		$HttpSocket = new HttpSocket(array('timeout' => UseMailChimpComponent::POST_TIMEOUT));
+		$HttpSocket = new HttpSocket(array('timeout' => MailChimpComponent::POST_TIMEOUT));
 		$params['apikey'] = $this->__apiKey;
 
 		// check if an API-key is provided
@@ -225,8 +225,8 @@ class UseMailChimpComponent extends Component {
 	public function initialize(Controller $controller) {
 		Configure::load('mail_chimp');
 		$this->__apiUrl = Configure::read('Chimp.url') . Configure::read('Chimp.version');
-		$this->__defaultFormat = UseMailChimpComponent::JSON;
+		$this->__defaultFormat = MailChimpComponent::JSON;
 		$this->__setApikey(Configure::read('Chimp.key'));
-		$this->__setFormat(UseMailChimpComponent::JSON);
+		$this->__setFormat(MailChimpComponent::JSON);
 	}
 }
