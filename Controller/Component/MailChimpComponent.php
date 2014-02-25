@@ -32,7 +32,7 @@ App::uses('HttpSocket', 'Network/Http');
  * @throws  Exception
  */
 class MailChimpComponent extends Component {
-
+	//Testing OAT
 	const JSON = 'json';
 	const XML = 'xml';
 	const PHP = 'php';
