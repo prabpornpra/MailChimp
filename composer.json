@@ -15,9 +15,6 @@
     ],
     "minimum-stability": "dev",
     "extra": {
-	"installer-paths": {
-		"app/Plugin/{$name}": ["prabpornpra/cakephp-mailchimp"]
-	},
-	"installer-name": "MailChimp"
+	    "installer-name": "MailChimp"
     }
 }
