@@ -1,0 +1,23 @@
+{
+    "name": "prabpornpra/cakephp-mailchimp",
+    "description": "CakePHP 2.x plugin for MailChimp",
+    "type": "cakephp-plugin",
+    "require": {
+	"php": ">=5.3.0",
+        "composer/installers": "~1.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "prabpornpra",
+            "email": "flurrytime@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "extra": {
+	"installer-paths": {
+		"app/Plugin/{$name}": ["prabpornpra/cakephp-mailchimp"]
+	},
+	"installer-name": "MailChimp"
+    }
+}
