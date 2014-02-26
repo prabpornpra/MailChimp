@@ -63,12 +63,24 @@ class MailChimpComponent extends Component {
  *
  * @throws Exception
  */
-	public function listSubscribe($listId, $params) {
-		$params['id'] = $listId;
-		$selectionMethod = Configure::read('Chimp.lists_subscribe');
+    public function listSubscribe($listId, $params) {
 
-		return $this->__makeCall($params, $selectionMethod);
-	}
+        if ($listId == '' || empty($listId)) {
+            throw new Exception(
+                __("List id is empty")
+            );
+        }
+        if (!in_array("email", $params)) {
+            throw new Exception(
+                __("Email is empty")
+            );
+        }
+
+        $params['id'] = $listId;
+        $selectionMethod = Configure::read('Chimp.lists_subscribe');
+
+        return $this->__makeCall($params, $selectionMethod);
+    }
 
 /**
  * Set api key for sending a request
